@@ -1,7 +1,9 @@
 // heroku, change to url connecting to
-var socket = require("socket.io-client")("https://queens-footfall-monitor.herokuapp.com");
+//var socket = require("socket.io-client")("https://queens-footfall-monitor.herokuapp.com");
 //local host 
 //var socket = require("socket.io-client")("http://localhost:3000"); //change from 3000 if errors in local testing 
+var socket = require("socket.io-client")("http://192.168.86.144:3000"); //will change unless you have a staticIP address
+//above is used if server hosted on another PC, use external PC ip of that PC. if on PI, command is ifconfig, on pc command is ipconfig 
 const Gpio = require('pigpio').Gpio; //library for US module
 const delay = require('delay'); //delay reading first measurement to second for direction detection
 
